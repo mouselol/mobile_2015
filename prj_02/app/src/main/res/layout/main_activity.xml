@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".TodoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Нужно сделать:"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:choiceMode="singleChoice"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextNewTask" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editTextNewTask"
+        android:text="Новая задача"
+        android:layout_below="@+id/buttonAddTask"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить"
+        android:id="@+id/buttonAddTask"
+        android:onClick="buttonAddTaskClick"
+        android:layout_below="@+id/buttonGotoDone"
+        android:layout_toEndOf="@+id/editTextNewTask"
+        android:layout_marginTop="46dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="см готовые"
+        android:id="@+id/buttonGotoDone"
+        android:layout_below="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2"
+        android:onClick="buttonGotoDoneClick"
+        />
+</RelativeLayout>
