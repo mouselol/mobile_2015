@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/mainLinearLayout"
+
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="через intent"
+        android:id="@+id/buttonOpenCameraIntent"
+        android:layout_gravity="center_horizontal"
+        android:onClick="buttonCameraIntent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="через surfaceview"
+        android:id="@+id/buttonCameraSurface"
+        android:layout_gravity="center_horizontal"
+        android:onClick="buttonCameraSurface" />
+
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:id="@+id/imageViewPhoto"
+            android:layout_weight=".75"
+            android:layout_width="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="фильтр красный"
+                android:id="@+id/buttonFilterFirst"
+                android:layout_gravity="center_horizontal"
+                android:onClick="buttonFilterFirstClick" />
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="фильтр зеленый"
+                android:id="@+id/buttonFilterSecond"
+                android:layout_gravity="center_horizontal"
+                android:onClick="buttonFilterSecondClick" />
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
